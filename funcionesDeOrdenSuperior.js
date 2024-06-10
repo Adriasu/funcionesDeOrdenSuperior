@@ -2023,8 +2023,20 @@ const countriesData = [
     }
   ]
 
-  // Ejercicio 3
+  // Ej 3: Utiliza forEach para mostrar con console.log cada país del array de países.
 
   countries.forEach((county) => {
     console.log(county);
+  })
+
+  // Ej 4: Utiliza forEach para mostrar con console.log cada nombre del array de nombres.
+  
+  names.forEach((name) => {
+    console.log(name);
+  })
+
+  // Ej 5: Utiliza forEach para mostrar con console.log cada número del array de números.
+
+  numbers.forEach((num) =>{
+    console.log(num);
   })
