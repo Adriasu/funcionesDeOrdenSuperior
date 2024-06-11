@@ -2149,7 +2149,14 @@ const countriesData = [
 // })
 // console.log(namesOverSeven);
 
-// Utilice every para comprobar si todos los países contienen la palabra land.
+// Ej 21: Utilice every para comprobar si todos los países contienen la palabra land.
+
+const allCountriresContainLand = countries.every((country) => {
+    return country.toLowerCase().includes("land")
+})
+console.log(allCountriresContainLand);
+
+
 
 // Explique la diferencia entre find y findIndex.
 
