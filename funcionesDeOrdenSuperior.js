@@ -2040,3 +2040,87 @@ const countriesData = [
   numbers.forEach((num) =>{
     console.log(num);
   })
+
+// Ej 6: Utiliza map para crear un nuevo array cambiando cada país a mayúsculas en el array de países.
+
+const countriesToUpperCase = countries.map((country) => {
+    return country.toUpperCase()
+})
+console.log(countriesToUpperCase);
+
+// Ej 7: Utilice map para crear un array de longitudes de países a partir del array de países.
+
+const countriesLength = countries.map((country) => {
+    return country.length
+})
+
+console.log(countriesLength);
+
+// Ej 8: Usa map para crear un nuevo array cambiando cada número al cuadrado en el array de números.
+
+const squareNumer = numbers.map((num) => {
+    return num**2
+})
+
+console.log(squareNumer);
+
+// Ej 9: Utilice map para cambiar cada nombre a mayúsculas en el array de nombres.
+
+const namesToUpperCase = names.map((name) => {
+    return name.toLocaleUpperCase()
+})
+
+console.log(namesToUpperCase);
+
+// Ej 10: Utilice map para asignar el array de productos a sus correspondientes precios.
+
+const productsPrice = products.map((prod) =>{
+    return prod.price = products  
+})
+
+console.log(productsPrice);
+
+// Ej 11: Utilice filter para filtrar los países que contienen land.
+
+const countriesContainingLand = countriesData.filter((country) => {
+    return country.name.includes("land")
+})
+
+console.log(countriesContainingLand);
+
+// Ej 12: Utilice filter para filtrar los países que tienen seis caracteres.
+
+const sixCharactresCountries = countries.filter((country) => {
+    return country.length === 6 
+})
+
+console.log(sixCharactresCountries);
+
+// Ej 13: Utilice filter para filtrar los países que contengan seis letras o más en el array de países.
+
+const sixMoreCharactresCountries = countries.filter((country) => {
+    return country.length >= 6 
+})
+
+console.log(sixMoreCharactresCountries);
+
+// Utilice filter para filtrar los países que empiezan por "E";
+
+const countryStartWithE = countriesData.filter((country) => {
+    return country.name.charAt(0) === "E"
+})
+
+console.log(countryStartWithE);
+
+// Utilice filter para filtrar sólo los precios con valores.
+
+// Declara una función llamada getStringLists que toma un array como parámetro y devuelve un array sólo con elementos string.
+
+// Usa reduce para sumar todos los números del array de números.
+
+// Utiliza reduce para concatenar todos los países y producir esta frase: Estonia, Finland, Sweden, Denmark, Norway, y IceLand son países del norte de Europa
+
+// Explique la diferencia entre some y every
+
+// Utilice some para comprobar si la longitud de algunos nombres es superior a siete en el array de nombres.
+
