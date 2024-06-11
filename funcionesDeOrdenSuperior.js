@@ -2023,104 +2023,155 @@ const countriesData = [
     }
   ]
 
-  // Ej 3: Utiliza forEach para mostrar con console.log cada país del array de países.
+//   // Ej 3: Utiliza forEach para mostrar con console.log cada país del array de países.
 
-  countries.forEach((county) => {
-    console.log(county);
-  })
+//   countries.forEach((county) => {
+//     console.log(county);
+//   })
 
-  // Ej 4: Utiliza forEach para mostrar con console.log cada nombre del array de nombres.
+//   // Ej 4: Utiliza forEach para mostrar con console.log cada nombre del array de nombres.
   
-  names.forEach((name) => {
-    console.log(name);
-  })
+//   names.forEach((name) => {
+//     console.log(name);
+//   })
 
-  // Ej 5: Utiliza forEach para mostrar con console.log cada número del array de números.
+//   // Ej 5: Utiliza forEach para mostrar con console.log cada número del array de números.
 
-  numbers.forEach((num) =>{
-    console.log(num);
-  })
+//   numbers.forEach((num ="angel") =>{
+//     console.log(num);
+//   })
 
-// Ej 6: Utiliza map para crear un nuevo array cambiando cada país a mayúsculas en el array de países.
+// // Ej 6: Utiliza map para crear un nuevo array cambiando cada país a mayúsculas en el array de países.
 
-const countriesToUpperCase = countries.map((country) => {
-    return country.toUpperCase()
-})
-console.log(countriesToUpperCase);
+// const countriesToUpperCase = countries.map((country) => {
+//     return country.toUpperCase()
+// })
+// console.log(countriesToUpperCase);
 
-// Ej 7: Utilice map para crear un array de longitudes de países a partir del array de países.
+// // Ej 7: Utilice map para crear un array de longitudes de países a partir del array de países.
 
-const countriesLength = countries.map((country) => {
-    return country.length
-})
+// const countriesLength = countries.map((country) => {
+//     return country.length
+// })
 
-console.log(countriesLength);
+// console.log(countriesLength);
 
-// Ej 8: Usa map para crear un nuevo array cambiando cada número al cuadrado en el array de números.
+// // Ej 8: Usa map para crear un nuevo array cambiando cada número al cuadrado en el array de números.
 
-const squareNumer = numbers.map((num) => {
-    return num**2
-})
+// const squareNumer = numbers.map((num) => {
+//     return num**2
+// })
 
-console.log(squareNumer);
+// console.log(squareNumer);
 
-// Ej 9: Utilice map para cambiar cada nombre a mayúsculas en el array de nombres.
+// // Ej 9: Utilice map para cambiar cada nombre a mayúsculas en el array de nombres.
 
-const namesToUpperCase = names.map((name) => {
-    return name.toLocaleUpperCase()
-})
+// const namesToUpperCase = names.map((name) => {
+//     return name.toLocaleUpperCase()
+// })
 
-console.log(namesToUpperCase);
+// console.log(namesToUpperCase);
 
-// Ej 10: Utilice map para asignar el array de productos a sus correspondientes precios.
+// // Ej 10: Utilice map para asignar el array de productos a sus correspondientes precios.
 
-const productsPrice = products.map((prod) =>{
-    return prod.price = products  
-})
+// const productsPrice = products.map((prod) =>{
+//     return prod.price = products  
+// })
 
-console.log(productsPrice);
+// console.log(productsPrice);
 
 // Ej 11: Utilice filter para filtrar los países que contienen land.
 
-const countriesContainingLand = countriesData.filter((country) => {
-    return country.name.includes("land")
-})
+// const countriesContainingLand = countries.filter((country) => {
+//     return country.toLowerCase().includes("land")
+// })
 
-console.log(countriesContainingLand);
+// console.log(countriesContainingLand);
 
-// Ej 12: Utilice filter para filtrar los países que tienen seis caracteres.
+// // Ej 12: Utilice filter para filtrar los países que tienen seis caracteres.
 
-const sixCharactresCountries = countries.filter((country) => {
-    return country.length === 6 
-})
+// const sixCharactresCountries = countries.filter((country) => {
+//     return country.length === 6 
+// })
 
-console.log(sixCharactresCountries);
+// console.log(sixCharactresCountries);
 
-// Ej 13: Utilice filter para filtrar los países que contengan seis letras o más en el array de países.
+// // Ej 13: Utilice filter para filtrar los países que contengan seis letras o más en el array de países.
 
-const sixMoreCharactresCountries = countries.filter((country) => {
-    return country.length >= 6 
-})
+// const sixMoreCharactresCountries = countries.filter((country) => {
+//     return country.length >= 6 
+// })
 
-console.log(sixMoreCharactresCountries);
+// console.log(sixMoreCharactresCountries);
 
-// Utilice filter para filtrar los países que empiezan por "E";
+// // Ej 14: Utilice filter para filtrar los países que empiezan por "E";
 
-const countryStartWithE = countriesData.filter((country) => {
-    return country.name.charAt(0) === "E"
-})
+// const countryStartWithE = countriesData.filter((country) => {
+//     return country.name.charAt(0) === "E"
+// })
 
-console.log(countryStartWithE);
+// console.log(countryStartWithE);
 
-// Utilice filter para filtrar sólo los precios con valores.
+// // Ej 15: Utilice filter para filtrar sólo los precios con valores.
 
-// Declara una función llamada getStringLists que toma un array como parámetro y devuelve un array sólo con elementos string.
+// const valuePrices = products.filter((value) => {
+//     return typeof value.price === "number"
+// })
 
-// Usa reduce para sumar todos los números del array de números.
+// console.log(valuePrices);
 
-// Utiliza reduce para concatenar todos los países y producir esta frase: Estonia, Finland, Sweden, Denmark, Norway, y IceLand son países del norte de Europa
+// // Ej 16: Declara una función llamada getStringLists que toma un array como parámetro y devuelve un array sólo con elementos string.
 
-// Explique la diferencia entre some y every
+// const getStringLists = (arr) => {
+//     let string = arr.join(" ")
+//     let result = string.split(" ")
+//     return console.log(result);
+// }
 
-// Utilice some para comprobar si la longitud de algunos nombres es superior a siete en el array de nombres.
+// getStringLists(numbers)
+
+// // Ej 17: Usa reduce para sumar todos los números del array de números.
+
+// const sum = numbers.reduce((a, b) => a + b, 0)
+
+// console.log(sum);
+
+// Ej 18: Utiliza reduce para concatenar todos los países y producir esta frase: Estonia, Finland, Sweden, Denmark, Norway, y IceLand son países del norte de Europa
+
+
+
+// Ej 19: Explique la diferencia entre some y every = EVERY comprueba si TODOS los elemenos son iguales en algun aspecto y SOME solo si alguno es similar en un aspecto.
+
+// //Ej 20: Utilice some para comprobar si la longitud de algunos nombres es superior a siete en el array de nombres.
+
+// const namesOverSeven = names.some((name) => {
+//     return name.length > 7
+// })
+// console.log(namesOverSeven);
+
+// Utilice every para comprobar si todos los países contienen la palabra land.
+
+// Explique la diferencia entre find y findIndex.
+
+// Utilice find para encontrar el primer país que contenga sólo seis letras en el array de países.
+
+// Utilice findIndex para encontrar la posición del primer país que contenga sólo seis letras en el array de países.
+
+// Utilice findIndex para encontrar la posición de Norway si no existe en el array obtendrá -1.
+
+// Utilice findIndex para encontrar la posición de Russia si no existe en el array obtendrá -1.
+
+// Encuentre la suma del precio de los productos usando sólo reduce(callback)).
+
+// Cree una función que retorne un array de objetos, que es la letra y el número de veces que la letra usa para empezar el nombre de un país.
+
+// Declara una función getFirstTenCountries y retorna un array de diez países. Utiliza diferente programación funcional para trabajar en el array countries.js.
+
+// Declara una función getLastTenCountries que devuelve los últimos diez países del array de países.
+
+// Encuentre qué letra se utiliza muchas veces como inicial de un nombre de país del array de países (ej. Finland, Fiji, France etc)
+
+// Utiliza la información de los países, en la carpeta de datos. Ordena los países por nombre, por capital, por población
+
+
 
