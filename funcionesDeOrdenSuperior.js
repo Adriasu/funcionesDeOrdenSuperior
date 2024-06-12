@@ -2138,6 +2138,16 @@ const countriesData = [
 
 // Ej 18: Utiliza reduce para concatenar todos los países y producir esta frase: Estonia, Finland, Sweden, Denmark, Norway, y IceLand son países del norte de Europa
 
+// const concatenatedPhrase = countries.reduce(
+//     (acumulador, currentvalue, index) => {
+//         if (index === countries.length-1) {
+//             return `${acumulador}, y ${currentvalue} son paises del norte de Europa`
+//         }
+//         else return `${acumulador}, ${currentvalue}`
+//     }
+// )
+// console.log(concatenatedPhrase);
+
 // Ej 19: Explique la diferencia entre some y every = EVERY comprueba si TODOS los elemenos son iguales en algun aspecto y SOME solo si alguno es similar en un aspecto.
 
 // //Ej 20: Utilice some para comprobar si la longitud de algunos nombres es superior a siete en el array de nombres.
@@ -2185,15 +2195,20 @@ const countriesData = [
 //     })
 //     console.log(positionRussia);
 
-// Ej 27: Encuentre la suma del precio de los productos usando sólo reduce(callback)).
+// // Ej 27: Encuentre la suma del precio de los productos usando sólo reduce(callback)).
 
-const sumPrice = products.reduce((priceA, priceB) => {
-    typeof priceA.price === "number" && typeof priceB.price === "number" 
-        return priceA.price + priceB.price
-}, 0)
-console.log(sumPrice);
+// const sumPrice = products.reduce((acc, priceCur) => {
+//     if (typeof priceCur.price === "number") {
+//         return acc + priceCur.price
+//     }  
+//     else { return acc  
+//     }      
+// }, 0)
+// console.log(sumPrice);
 
-// Cree una función que retorne un array de objetos, que es la letra y el número de veces que la letra usa para empezar el nombre de un país.
+// Ej 28: Cree una función que retorne un array de objetos, que es la letra y el número de veces que la letra usa para empezar el nombre de un país.
+
+
 
 // Declara una función getFirstTenCountries y retorna un array de diez países. Utiliza diferente programación funcional para trabajar en el array countries.js.
 
