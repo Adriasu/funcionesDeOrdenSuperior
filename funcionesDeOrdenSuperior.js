@@ -2136,7 +2136,7 @@ const countriesData = [
 
 // console.log(sum);
 
-// Ej 18: Utiliza reduce para concatenar todos los países y producir esta frase: Estonia, Finland, Sweden, Denmark, Norway, y IceLand son países del norte de Europa
+// // Ej 18: Utiliza reduce para concatenar todos los países y producir esta frase: Estonia, Finland, Sweden, Denmark, Norway, y IceLand son países del norte de Europa
 
 // const concatenatedPhrase = countries.reduce(
 //     (acumulador, currentvalue, index) => {
@@ -2200,19 +2200,73 @@ const countriesData = [
 // const sumPrice = products.reduce((acc, priceCur) => {
 //     if (typeof priceCur.price === "number") {
 //         return acc + priceCur.price
-//     }  
-//     else { return acc  
-//     }      
+//     }
+//     else { return acc
+//     }
 // }, 0)
 // console.log(sumPrice);
 
-// Ej 28: Cree una función que retorne un array de objetos, que es la letra y el número de veces que la letra usa para empezar el nombre de un país.
+// // Ej 28: Cree una función que retorne un array de objetos, que es la letra y el número de veces que la letra usa para empezar el nombre de un país.
 
+// function countStartingLetters(array) {
+//   let letterCount = {};
+//   array.forEach((country) => {
+//     let firstLetter = country.name.charAt(0).toUpperCase();
+//     if (letterCount[firstLetter]) {
+//       letterCount[firstLetter]++;
+//     } else {
+//       letterCount[firstLetter] = 1;
+//     }
+//   });
 
+//   let result = [];
+//   for (let letter in letterCount) {
+//     result.push({
+//       letter: letter,
+//       count: letterCount[letter],
+//     });
+//   }
+//   return console.log(result);
+// }
 
-// Declara una función getFirstTenCountries y retorna un array de diez países. Utiliza diferente programación funcional para trabajar en el array countries.js.
+// countStartingLetters(countriesData);
+
+// -------------------USANDO REDUCE ----------------------------
+
+// function countStartingLetters(array) {
+//   const letterCount = array.reduce((acc, country) => {
+//     let firstLetter = country.name.charAt(0).toUpperCase();
+//     acc[firstLetter] = (acc[firstLetter] || 0) + 1;
+//     return acc;
+//   }, {});
+//   const result = Object.keys(letterCount).map((letter) => ({
+//     letter,
+//     count: letterCount[letter],
+//   }));
+
+//   return result;
+// }
+// const startingLetterCounts = countStartingLetters(countriesData);
+// console.log(startingLetterCounts);
+
+// // Ej 29: Declara una función getFirstTenCountries y retorna un array de diez países. Utiliza diferente programación funcional para trabajar en el array countries.js.
+
+const getFirstTenCountries = (array) => {
+  const firstTenElements = array.slice(0, 10);
+
+  const firstTenCountries = firstTenElements.map((country) => {
+    let nameCountry = country.name;
+    return nameCountry;
+  });
+
+  return firstTenCountries
+};
+
+console.log(getFirstTenCountries(countriesData));
 
 // Declara una función getLastTenCountries que devuelve los últimos diez países del array de países.
+
+
 
 // Encuentre qué letra se utiliza muchas veces como inicial de un nombre de país del array de países (ej. Finland, Fiji, France etc)
 
