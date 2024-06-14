@@ -2341,4 +2341,6 @@ const countriesData = [
 
 // console.log(orderPopulation);
 
+// Ej 33: *** Encuentre las 10 lenguas más habladas:
+
 
