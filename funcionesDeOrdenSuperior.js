@@ -2281,30 +2281,27 @@ const countriesData = [
 
 // Ej 31: Encuentre qué letra se utiliza muchas veces como inicial de un nombre de país del array de países (ej. Finland, Fiji, France etc)
 
-const letterCount = countriesData.reduce((acc, country) => {
-  let firstLetter = country.name.charAt(0).toUpperCase();
-  acc[firstLetter] = (acc[firstLetter] || 0) + 1;
-  return acc;
-}, {});
-console.log(letterCount);
+function countStartingLetters(array) {
+  const letterCount = array.reduce((acc, country) => {
+    let firstLetter = country.name.charAt(0).toUpperCase();
+    acc[firstLetter] = (acc[firstLetter] || 0) + 1;
+    return acc;
+  }, {});
+  const result = Object.keys(letterCount).map((letter) => ({
+    letter,
+    count: letterCount[letter],
+  }));
 
-const listCount = Object.values(letterCount)
-console.log(listCount);
-
-const maxNumber = Math.max(...listCount)
-console.log(maxNumber);
-
-for (let letter in letterCount) {
-  if (letterCount[letter] = maxNumber) {
-    console.log(letterCount[letter]); 
-  }
+  return result;
 }
+const startingLetterCounts = countStartingLetters(countriesData);
 
+const listOrderCount = startingLetterCounts.sort((a, b) => {
+  if (a.count < b.count) return 1;
+  if (a.count > b.count) return -1;
+  return 0;
+});
 
-
-
-
-
-
+console.log(`La letra inicial que mas se repite es "${listOrderCount[0].letter}", que se repite ${listOrderCount[0].count} veces`);
 
 // Utiliza la información de los países, en la carpeta de datos. Ordena los países por nombre, por capital, por población
