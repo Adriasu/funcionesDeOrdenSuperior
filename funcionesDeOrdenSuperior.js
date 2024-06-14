@@ -2251,23 +2251,60 @@ const countriesData = [
 
 // // Ej 29: Declara una función getFirstTenCountries y retorna un array de diez países. Utiliza diferente programación funcional para trabajar en el array countries.js.
 
-const getFirstTenCountries = (array) => {
-  const firstTenElements = array.slice(0, 10);
+// const getFirstTenCountries = (array) => {
+//   const firstTenElements = array.slice(0, 10);
 
-  const firstTenCountries = firstTenElements.map((country) => {
-    let nameCountry = country.name;
-    return nameCountry;
-  });
+//   const firstTenCountries = firstTenElements.map((country) => {
+//     let nameCountry = country.name;
+//     return nameCountry;
+//   });
 
-  return firstTenCountries
-};
+//   return firstTenCountries
+// };
 
-console.log(getFirstTenCountries(countriesData));
+// console.log(getFirstTenCountries(countriesData));
 
-// Declara una función getLastTenCountries que devuelve los últimos diez países del array de países.
+// // EJ: 30 Declara una función getLastTenCountries que devuelve los últimos diez países del array de países.
+
+// function getLastTenCountries(array) {
+//   const LastTenElements = array.slice(array.length - 11, array.length - 1);
+
+//   const lastTenCountries = LastTenElements.map((country) => {
+//     let nameCountry = country.name;
+//     return nameCountry;
+//   });
+
+//   return lastTenCountries;
+// }
+
+// console.log(getLastTenCountries(countriesData));
+
+// Ej 31: Encuentre qué letra se utiliza muchas veces como inicial de un nombre de país del array de países (ej. Finland, Fiji, France etc)
+
+const letterCount = countriesData.reduce((acc, country) => {
+  let firstLetter = country.name.charAt(0).toUpperCase();
+  acc[firstLetter] = (acc[firstLetter] || 0) + 1;
+  return acc;
+}, {});
+console.log(letterCount);
+
+const listCount = Object.values(letterCount)
+console.log(listCount);
+
+const maxNumber = Math.max(...listCount)
+console.log(maxNumber);
+
+for (let letter in letterCount) {
+  if (letterCount[letter] = maxNumber) {
+    console.log(letterCount[letter]); 
+  }
+}
 
 
 
-// Encuentre qué letra se utiliza muchas veces como inicial de un nombre de país del array de países (ej. Finland, Fiji, France etc)
+
+
+
+
 
 // Utiliza la información de los países, en la carpeta de datos. Ordena los países por nombre, por capital, por población
