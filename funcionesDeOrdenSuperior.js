@@ -2279,29 +2279,40 @@ const countriesData = [
 
 // console.log(getLastTenCountries(countriesData));
 
-// Ej 31: Encuentre qué letra se utiliza muchas veces como inicial de un nombre de país del array de países (ej. Finland, Fiji, France etc)
+// // Ej 31: Encuentre qué letra se utiliza muchas veces como inicial de un nombre de país del array de países (ej. Finland, Fiji, France etc)
 
-function countStartingLetters(array) {
-  const letterCount = array.reduce((acc, country) => {
-    let firstLetter = country.name.charAt(0).toUpperCase();
-    acc[firstLetter] = (acc[firstLetter] || 0) + 1;
-    return acc;
-  }, {});
-  const result = Object.keys(letterCount).map((letter) => ({
-    letter,
-    count: letterCount[letter],
-  }));
+// function countStartingLetters(array) {
+//   const letterCount = array.reduce((acc, country) => {
+//     let firstLetter = country.name.charAt(0).toUpperCase();
+//     acc[firstLetter] = (acc[firstLetter] || 0) + 1;
+//     return acc;
+//   }, {});
+//   const result = Object.keys(letterCount).map((letter) => ({
+//     letter,
+//     count: letterCount[letter],
+//   }));
 
-  return result;
-}
-const startingLetterCounts = countStartingLetters(countriesData);
+//   return result;
+// }
+// const startingLetterCounts = countStartingLetters(countriesData);
 
-const listOrderCount = startingLetterCounts.sort((a, b) => {
-  if (a.count < b.count) return 1;
-  if (a.count > b.count) return -1;
-  return 0;
-});
+// const listOrderCount = startingLetterCounts.sort((a, b) => {
+//   if (a.count < b.count) return 1;
+//   if (a.count > b.count) return -1;
+//   return 0;
+// });
 
-console.log(`La letra inicial que mas se repite es "${listOrderCount[0].letter}", que se repite ${listOrderCount[0].count} veces`);
+// const countryStartWithS = countriesData.filter((country) => {
+//     return country.name.toLocaleUpperCase().charAt(0) === "S"
+// })
+
+// const listCountriesStartWhisthS = countryStartWithS.map((country) => {
+//   let nameCountry = country.name
+//   return nameCountry
+// })
+
+// const listCountriesString = listCountriesStartWhisthS.join(", ")
+
+// console.log(`La letra inicial que mas se repite es "${listOrderCount[0].letter}", que se repite ${listOrderCount[0].count} y son: ${listCountriesString}`);
 
 // Utiliza la información de los países, en la carpeta de datos. Ordena los países por nombre, por capital, por población
