@@ -2315,4 +2315,30 @@ const countriesData = [
 
 // console.log(`La letra inicial que mas se repite es "${listOrderCount[0].letter}", que se repite ${listOrderCount[0].count} y son: ${listCountriesString}`);
 
-// Utiliza la información de los países, en la carpeta de datos. Ordena los países por nombre, por capital, por población
+// Ej 32: Utiliza la información de los países, en la carpeta de datos. Ordena los países por nombre, por capital, por población
+
+// const orderName = countriesData.sort(function (a, b) {
+//   if (a.name < b.name) return -1;
+//   if (a.name > b.name) return 1;
+//   return 0;
+// });
+
+// console.log(orderName);
+
+// const orderCapital = countriesData.sort(function (a, b) {
+//   if (a.capital < b.capital) return -1;
+//   if (a.capital > b.capital) return 1;
+//   return 0;
+// });
+
+// console.log(orderCapital);
+
+// const orderPopulation = countriesData.sort((a, b) => {
+//   if (a.population < b.population) return -1;
+//   if (a.population > b.population) return 1;
+//   return 0;
+// })
+
+// console.log(orderPopulation);
+
+
