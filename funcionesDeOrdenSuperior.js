@@ -2138,15 +2138,15 @@ const countriesData = [
 
 // // Ej 18: Utiliza reduce para concatenar todos los países y producir esta frase: Estonia, Finland, Sweden, Denmark, Norway, y IceLand son países del norte de Europa
 
-// const concatenatedPhrase = countries.reduce(
-//     (acumulador, currentvalue, index) => {
-//         if (index === countries.length-1) {
-//             return `${acumulador}, y ${currentvalue} son paises del norte de Europa`
-//         }
-//         else return `${acumulador}, ${currentvalue}`
-//     }
-// )
-// console.log(concatenatedPhrase);
+const concatenatedPhrase = countries.reduce(
+    (acumulador, currentvalue, index) => {
+        if (index === countries.length-1) {
+            return `${acumulador}, y ${currentvalue} son paises del norte de Europa`
+        }
+        else return `${acumulador}, ${currentvalue}`
+    }
+)
+console.log(concatenatedPhrase);
 
 // Ej 19: Explique la diferencia entre some y every = EVERY comprueba si TODOS los elemenos son iguales en algun aspecto y SOME solo si alguno es similar en un aspecto.
 
@@ -2233,21 +2233,21 @@ const countriesData = [
 
 // -------------------USANDO REDUCE ----------------------------
 
-// function countStartingLetters(array) {
-//   const letterCount = array.reduce((acc, country) => {
-//     let firstLetter = country.name.charAt(0).toUpperCase();
-//     acc[firstLetter] = (acc[firstLetter] || 0) + 1;
-//     return acc;
-//   }, {});
-//   const result = Object.keys(letterCount).map((letter) => ({
-//     letter,
-//     count: letterCount[letter],
-//   }));
+function countStartingLetters(array) {
+  const letterCount = array.reduce((acc, country) => {
+    let firstLetter = country.name.charAt(0).toUpperCase();
+    acc[firstLetter] = (acc[firstLetter] || 0) + 1;
+    return acc;
+  }, {});
+  const result = Object.keys(letterCount).map((letter) => ({
+    letter,
+    count: letterCount[letter],
+  }));
 
-//   return result;
-// }
-// const startingLetterCounts = countStartingLetters(countriesData);
-// console.log(startingLetterCounts);
+  return result;
+}
+const startingLetterCounts = countStartingLetters(countriesData);
+console.log(startingLetterCounts);
 
 // // Ej 29: Declara una función getFirstTenCountries y retorna un array de diez países. Utiliza diferente programación funcional para trabajar en el array countries.js.
 
