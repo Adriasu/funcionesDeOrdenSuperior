@@ -2370,3 +2370,27 @@ const countriesData = [
 // }
 
 // console.log(mostSpokenLanguages(countriesData, 10));
+
+// Ej 34: Utilice el archivo countries_data.js para crear una función que cree los diez países más poblados.
+
+// function mostPopulatedCountries(array, num) {
+//   const populatedCountries = array.reduce((acc, country) => {
+//     acc[country.name] = country.population;
+//     return acc;
+//   }, {});
+
+//   const result = Object.keys(populatedCountries).map((country) => ({
+//     country,
+//     population: populatedCountries[country],
+//   }));
+
+//   result.sort((a, b) => {
+//     if (a.population < b.population) return 1;
+//     if (a.population > b.population) return -1;
+//     return 0;
+//   });
+
+//   return result.slice(0, num);
+// }
+
+// console.log(mostPopulatedCountries(countriesData, 10));
